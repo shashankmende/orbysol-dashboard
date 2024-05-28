@@ -23,6 +23,7 @@
 
 .individual-banners:hover{
     transform: scale(1.1);
+    color: rgb(41, 41, 72);
 }
 
 h1{
