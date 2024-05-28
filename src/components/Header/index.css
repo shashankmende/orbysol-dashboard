@@ -1,58 +1,41 @@
-*{
+* {
   margin: 0px;
+  font-family: geomanist !important;
 }
 
 header {
-
   height: 70px;
   display: flex;
   background-color: #013246;
-
 }
 
 .container1 {
   width: 50%;
-
   height: inherit;
   display: flex;
   align-items: center;
-
   justify-content: space-between;
-  /* padding: 10px; */
-  /* padding-left: 10px; */
-
 }
-
 
 .three-icons-container {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 220px;
-
 }
-
 
 .container2 {
   width: 50%;
   height: inherit;
-
   background-image: url('https://res.cloudinary.com/dvvhafkyv/image/upload/v1716455635/gradient_lwzrad.png');
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 15px;
-
-
-
-
 }
 
 .icon-container {
-
-
   display: flex;
   justify-content: flex-start;
 }
@@ -72,7 +55,7 @@ header {
 
 .header-horizontal-line {
   height: 50px;
-  background-image: linear-gradient(to bottom, rgb(15, 15, 89),white,rgb(14, 14, 95));
+  background-image: linear-gradient(to bottom, rgb(15, 15, 89), white, rgb(14, 14, 95));
   width: 2px;
   border: none;
 }
@@ -80,18 +63,16 @@ header {
 .icons {
   height: 60px;
   width: 60px;
-
   margin-right: 5px;
   transform: width 2s;
 }
 
-.icons:hover{
+.icons:hover {
   transform: scale(1.1);
 }
 
 .search-container {
   background-color: aliceblue;
-
   width: 400px;
   border-radius: 20px;
   padding: 4px;
@@ -109,20 +90,18 @@ header {
   background-color: transparent;
 }
 
-input:focus{
+input:focus {
   outline: none;
 }
+
 .four-square-icon {
   color: white;
   size: 20px;
 }
 
-
 .suresh-profile-container {
   display: flex;
-  align-items: center    ;
-  /* position: relative;
-  left: 200px; */
+  align-items: center;
   margin-right: 15px;
 }
 
@@ -130,8 +109,7 @@ input:focus{
   color: white;
   font-family: sans-serif;
   margin-left: 15px;
-
-      margin-right: 15px;
+  margin-right: 15px;
 }
 
 .profile-down-arrow-container {
@@ -147,16 +125,14 @@ input:focus{
 .logout-container {
   display: flex;
   align-items: center;
-
 }
+
 .logout-text {
   margin-right: 15px;
 }
 
-
 .pop-up-container {
   position: absolute;
-
   background-color: rgb(210, 204, 204);
   width: 350px;
   top: 70px;
@@ -165,23 +141,21 @@ input:focus{
   border: 15px solid rgb(212, 207, 207);
 }
 
-/* .profile-down-arrow-container:hover{
-  background-color: red;
-  height: 100vw;
-  width: 100vw;
-  opacity: 1;
-  transform: scale(104%);
-} */
-
-
 .pop-up-content-container {
   background-color: #ffffff;
   padding: 15px;
-flex-grow: 1;
+  flex-grow: 1;
   border-radius: 15px;
 }
 
+.links-para {
+  border-bottom: 0.5px solid rgb(212, 207, 207);
+  padding-bottom: 10px;
+}
 
+.pop-up-text-container p:last-child{
+  border-bottom: none;
+}
 
 .cancel-icon {
   position: absolute;
@@ -194,23 +168,19 @@ flex-grow: 1;
   font-family: sans-serif;
   color: rgb(16, 16, 95);
   margin-bottom: 8px;
-
 }
 
 .pop-up-text-container {
   margin-top: 10px;
   text-align: start;
-
 }
 
 .pop-up-text-container p {
-  margin-bottom   : 10px !important;
+  margin-bottom: 10px !important;
   font-family: sans-serif;
   margin-top: 5px;
   color: black;
-
 }
-
 
 p a {
   color: black;
@@ -221,21 +191,33 @@ p a:hover {
   font-weight: bold;
 }
 
-.popup-horizontal-line {
-  background-color: hsl(0, 5%, 85%);
+.overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
-.overlay-container {
-  
+body.overlay {
+  overflow: hidden;
+  position: relative;
+}
+
+body.overlay::before {
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999; 
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 998;
 }
 
-.overlay-container h1 {
-  color: white;
-}
+

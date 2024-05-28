@@ -18,6 +18,11 @@
     font-family: sans-serif;
     color: white;
     /* width: 200px; */
+    
+}
+
+.individual-banners:hover{
+    transform: scale(1.1);
 }
 
 h1{
