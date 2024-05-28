@@ -1,225 +1,241 @@
-/* index.css */
-
-* {
-    margin: 0;
-  }
-  
-  header {
-    height: 70px;
-    display: flex;
-    background-color: #013246; /* Blue background for the entire header */
-  }
-  
-  .container1, .container2 {
-    width: 50%;
-    height: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .container2{
-    background-image: url('https://res.cloudinary.com/dvvhafkyv/image/upload/v1716455635/gradient_lwzrad.png');
-    background-size: cover;
-  }
-  
-  .three-icons-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 220px;
-  }
-  
-  .icon-container {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .three-containers {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 550px;
-  }
-  
-  .logo-image {
-    width: 50px;
-    height: 50px;
-    padding-left: 20px;
-  }
-  
-  .header-horizontal-line {
-    height: 50px;
-    background-image: linear-gradient(to bottom, rgb(15, 15, 89), white, rgb(14, 14, 95));
-    width: 2px;
-    border: none;
-  }
-  
-  .icons {
-    height: 60px;
-    width: 60px;
-    margin-right: 5px;
-    transition: transform 0.2s;
-  }
-  
-  .icons:hover {
-    transform: scale(1.1);
-  }
-  
-  .search-container {
-    background-color: aliceblue;
-    width: 400px;
-    border-radius: 20px;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-  
-  .search-container input {
-    border: none;
-    width: 80%;
-    font-size: 1em;
-    background-color: transparent;
-  }
-  
-  input:focus {
-    outline: none;
-  }
-  
-  .four-square-icon {
-    color: white;
-    size: 20px;
-  }
-  
-  .suresh-profile-container {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-  }
-  
-  .suresh-name {
-    color: white;
-    font-family: sans-serif;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  
-  .profile-down-arrow-container {
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-    margin-right: 15px;
-    color: white;
-    font-family: sans-serif;
-    cursor: pointer;
-  }
-  
-  .logout-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logout-text {
-    margin-right: 15px;
-  }
-  
-  .modal {
-    background-color: #f0f0f0; /* Light background for the popup */
-    width: 350px;
-    border: 12px solid #f0f0f0;
-    border-radius: 15px;
-    /* padding: 8px; */
-    z-index: 1001;
-    position: relative;
-  }
-  
-.inner-container {
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 8px;
-  
+*{
+  margin: 0px;
 }
-  
-  .cancel-icon-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    align-items: center;
-  }
-  
-  .cancel-icon {
-    cursor: pointer;
-  }
-  
-  .links-para {
-    margin-bottom: 10px;
-    border-bottom: 0.5px solid #f0f0f0;
-    padding-bottom: 10px;
-  }
-  
-  p a {
-    color: black;
-    font-family: sans-serif;
-  }
-  
-a:hover{
-    color: #013246;
-    font-weight: bold;
+
+header {
+
+  height: 70px;
+  display: flex;
+  background-color: #013246;
+
+}
+
+.container1 {
+  width: 50%;
+
+  height: inherit;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  /* padding: 10px; */
+  /* padding-left: 10px; */
+
 }
 
 
-  .links-container p:last-child {
-    border-bottom: none;
-  }
-  
-  /* .dropdown-popup .modal {
-    position: absolute;
-    top: 100%; Position the popup right below the trigger
-    left: 0px;
-    transform: translateY(0); Remove the centering transform
-    width: 200px; Adjust width as needed
-    background: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  } */
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-    z-index: 999; /* Ensure the overlay is behind the popup but in front of other content */
-  }
-  
-  body.blur {
-    filter: blur(5px); /* Blur effect */
-  }
-  
+.three-icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .profile-container-wrapper {
-    position: relative;
-  }
-  
+  width: 220px;
 
-  .profile-container-wrapper {
-    position: relative; /* Set the position of the parent container */
-  }
+}
+
+
+.container2 {
+  width: 50%;
+  height: inherit;
+
+  background-image: url('https://res.cloudinary.com/dvvhafkyv/image/upload/v1716455635/gradient_lwzrad.png');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+
+
+
+
+}
+
+.icon-container {
+
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.three-containers {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 550px;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  padding-left: 20px;
+}
+
+.header-horizontal-line {
+  height: 50px;
+  background-image: linear-gradient(to bottom, rgb(15, 15, 89),white,rgb(14, 14, 95));
+  width: 2px;
+  border: none;
+}
+
+.icons {
+  height: 60px;
+  width: 60px;
+
+  margin-right: 5px;
+  transform: width 2s;
+}
+
+.icons:hover{
+  transform: scale(1.1);
+}
+
+.search-container {
+  background-color: aliceblue;
+
+  width: 400px;
+  border-radius: 20px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.search-container input {
+  border: none;
+  width: 80%;
+  font-size: 1em;
+  background-color: transparent;
+}
+
+input:focus{
+  outline: none;
+}
+.four-square-icon {
+  color: white;
+  size: 20px;
+}
+
+
+.suresh-profile-container {
+  display: flex;
+  align-items: center    ;
+  /* position: relative;
+  left: 200px; */
+  margin-right: 15px;
+}
+
+.suresh-name {
+  color: white;
+  font-family: sans-serif;
+  margin-left: 15px;
+
+      margin-right: 15px;
+}
+
+.profile-down-arrow-container {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.logout-container {
+  display: flex;
+  align-items: center;
+
+}
+.logout-text {
+  margin-right: 15px;
+}
+
+
+.pop-up-container {
+  position: absolute;
+
+  background-color: rgb(210, 204, 204);
+  width: 350px;
+  top: 70px;
+  right: 70px;
+  border-radius: 15px;
+  border: 15px solid rgb(212, 207, 207);
+}
+
+/* .profile-down-arrow-container:hover{
+  background-color: red;
+  height: 100vw;
+  width: 100vw;
+  opacity: 1;
+  transform: scale(104%);
+} */
+
+
+.pop-up-content-container {
+  background-color: #ffffff;
+  padding: 15px;
+flex-grow: 1;
+  border-radius: 15px;
+}
+
+
+
+.cancel-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  size: 20px;
+}
+
+.my-profile-heading {
+  font-family: sans-serif;
+  color: rgb(16, 16, 95);
+  margin-bottom: 8px;
+
+}
+
+.pop-up-text-container {
+  margin-top: 10px;
+  text-align: start;
+
+}
+
+.pop-up-text-container p {
+  margin-bottom   : 10px !important;
+  font-family: sans-serif;
+  margin-top: 5px;
+  color: black;
+
+}
+
+
+p a {
+  color: black;
+}
+
+p a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.popup-horizontal-line {
+  background-color: hsl(0, 5%, 85%);
+}
+
+.overlay-container {
   
-  .dropdown-popup .modal {
-    position: absolute; /* Position the popup absolutely */
-    top: calc(100% + 10px); /* Position the popup just below the trigger */
-    left: 50%;
-    transform: translateX(-50%); /* Center the popup horizontally */
-    width: 200px; /* Adjust width as needed */
-    background: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; 
+}
+
+.overlay-container h1 {
+  color: white;
+}

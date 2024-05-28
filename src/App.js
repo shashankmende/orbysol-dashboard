@@ -4,7 +4,7 @@ import Main from './components/Main'
 import NewEnrollment from './components/NewEnrollment';
 import Table from './components/TableContent'
 import Patients from './components/Patients';
-import Login from './components/Login'
+// import Login from './components/Login'
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
     
     <Router>
       <Routes>
-        <Route path='/login' element={<Login/>}/>
+        {/* <Route path='/login' element={<Login/>}/> */}
         <Route path='/' element={<Main/>}/>
         <Route path='/new-enrollment' element={<NewEnrollment/>}/>
         <Route path='/registrations' element={<Table/>}/>
