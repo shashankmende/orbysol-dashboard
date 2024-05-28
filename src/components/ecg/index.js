@@ -46,18 +46,18 @@ const ECGChart = () => {
         const newSample = ecgData[newDataIndex].ecg.Samples[0];
 
         setData((prevData) => ({
-          labels: [...prevData.labels, ''], // Add an empty label for each new data point
+          labels: [...prevData.labels, ''],
           datasets: [
             {
               ...prevData.datasets[0],
-              data: [...prevData.datasets[0].data, newSample], // Append new data point
+              data: [...prevData.datasets[0].data, newSample],
             },
           ],
         }));
 
         dataIndex.current += 1;
       }
-    }, 300);
+    }, 100);
 
     return () => clearInterval(interval);
   }, [ecgData]);
@@ -68,19 +68,16 @@ const ECGChart = () => {
         data={data}
         options={{
           responsive: true,
-          maintainAspectRatio:false,
-          animation: false,
+          maintainAspectRatio: false,
+          animation: true,
           scales: {
             x: {
               display: true,
             },
             y: {
-              min: -1800,
-              max:2000,
               display: true,
-              ticks:{
-                display:true
-              }
+              min: -1000, // Set suggestedMin to ensure the scale accommodates negative values
+              max: 2000,  // Set suggestedMax to ensure the scale accommodates positive values
             },
           },
           elements: {
