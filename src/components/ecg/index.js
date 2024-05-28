@@ -1,21 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
-import './ecg.css'
+import './ecg.css';
 
 const ECGChart = () => {
   const [data, setData] = useState({
-    labels: Array(16).fill(''),
+    labels: [],
     datasets: [
       {
-        label: 'ECG Waveform',
-        data: Array(16).fill(0),
-        borderColor: 'black', // Waveform color
-        borderWidth: 0.8, // Waveform line width
+        data: [],
+        borderColor: '#ff6384',
+        borderWidth: 1,
         fill: false,
         tension: 0.1,
-        pointRadius: 0, // Remove point markers
-        pointHoverRadius: 0, // Remove hover effect on point markers
+        pointRadius: 0,
+        pointHoverRadius: 0,
       },
     ],
   });
@@ -24,99 +23,74 @@ const ECGChart = () => {
   const dataIndex = useRef(0);
 
   useEffect(() => {
-    // Fetch the data from public/data.json
-    fetch('/data.json')
-      .then((response) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/data.json');
         if (!response.ok) {
           throw new Error('Network response was not ok ' + response.statusText);
         }
-        return response.json();
-      })
-      .then((json) => {
+        const json = await response.json();
         setEcgData(json.data);
-      })
-      .catch((error) => console.error('Error fetching ECG data:', error));
+      } catch (error) {
+        console.error('Error fetching ECG data:', error);
+      }
+    };
+
+    fetchData();
   }, []);
 
-  const updateData = () => {
-    if (ecgData.length > 0) {
-      const newDataIndex = dataIndex.current % ecgData.length;
-      const newSamples = ecgData[newDataIndex].ecg.Samples;
-
-      setData((prevData) => ({
-        ...prevData,
-        datasets: [
-          {
-            ...prevData.datasets[0],
-            data: newSamples,
-          },
-        ],
-      }));
-
-      dataIndex.current += 1;
-    }
-  };
-
   useEffect(() => {
-    const interval = setInterval(updateData, 200); // Update every second
+    const interval = setInterval(() => {
+      if (ecgData.length > 0) {
+        const newDataIndex = dataIndex.current % ecgData.length;
+        const newSample = ecgData[newDataIndex].ecg.Samples[0];
+
+        setData((prevData) => ({
+          labels: [...prevData.labels, ''], // Add an empty label for each new data point
+          datasets: [
+            {
+              ...prevData.datasets[0],
+              data: [...prevData.datasets[0].data, newSample], // Append new data point
+            },
+          ],
+        }));
+
+        dataIndex.current += 1;
+      }
+    }, 300);
+
     return () => clearInterval(interval);
   }, [ecgData]);
 
   return (
-    <div>
+    <div className="line-container">
       <Line
         data={data}
         options={{
           responsive: true,
-          maintainAspectRatio: false,
+          maintainAspectRatio:false,
           animation: false,
           scales: {
             x: {
-                
               display: true,
-              grid: {
-                display: true,
-                color: 'black', // Grid line color
-                lineWidth: 0.3, // Grid line width
-              },
-              ticks: {
-                display: false, // Hide x-axis labels
-                maxTicksLimit: 30,
-               
-
-              },
-              
-            //   border: {
-            //     color: '#333', // x-axis line color
-            //     width: 2, // x-axis line width
-            //   },
             },
             y: {
-              min: -2500,
-              max: 2500,
-              grid: {
-                display: true,
-                color: 'black ', // Grid line color
-                lineWidth: 0.3, // Grid line width
-              },
-            //   border: {
-            //     color: '#333', // y-axis line color
-            //     width: 2, // y-axis line width
-            //   },
-              ticks: {
-                display:false,
-                color: '#333', // y-axis labels color
-              },
+              min: -1800,
+              max:2000,
+              display: true,
+              ticks:{
+                display:true
+              }
             },
           },
           elements: {
             line: {
-              borderWidth: 1, // Waveform line width
-              borderColor: '#ff6384', // Waveform color
+              borderWidth: 1,
+              borderColor: '#ff6384',
             },
             point: {
-              radius: 0, // Remove point markers
-              hoverRadius: 0, // Remove hover effect on point markers
+              radius: 0,
+              hoverRadius: 0,
             },
           },
           layout: {
@@ -127,15 +101,15 @@ const ECGChart = () => {
               bottom: 10,
             },
           },
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
         }}
-        // height={400} // Fixed height for the chart
-        // width={400}
-        className='line-container'
       />
     </div>
   );
 };
 
 export default ECGChart;
-
-
