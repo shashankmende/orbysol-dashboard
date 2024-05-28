@@ -1,0 +1,110 @@
+
+
+.sidebar {
+    background-color: hsl(36, 65%, 95%);
+    min-height: 100vh;
+    /* width: 280px; */
+    padding: 15px;
+    border-top-right-radius:10px;
+    border-bottom-right-radius: 10px;
+   /* transition: width 1s, transform 2s; */
+   animation: sidebarAnimation 1s ease-out 0s 1s forwards;
+}
+
+@keyframes sidebarAnimation {
+    from {
+      transform: translateX(-300px); /* Start the sidebar off-screen to the left */
+      background-color: red;
+    }
+    to {
+      transform: translateX(0); /* Slide the sidebar to its original position */
+      background-color: blue;
+    }
+  }
+  
+  
+
+
+
+.logo-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+}
+
+.logo-title-container h1{
+    font-size: 26px;
+    color: #0AC60A;
+    font-family: 'lobster';
+    font-weight: 600;
+}
+
+.web-logo {
+    width: 50px;
+}
+ul{
+
+    margin-top: 20px;
+}
+li{
+    list-style-type: none;
+}
+
+
+button{
+    width: 230px;
+    /* background-color: #0AC60A; */
+    
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: width 1s, transform 1s;
+    
+    
+}
+button:hover{
+    /* width: 240px; */
+    transform: scale(110%);
+}
+
+a{
+    text-decoration: none;
+}
+
+button img {
+    color: white;
+    margin-right: 20px;
+}
+
+button p{
+    background-color: transparent;
+    font-family: Arial, Helvetica,sans-serif;
+    font-size: 18px;
+    color: black;
+    border: none;
+    
+    
+    
+}
+
+.active-css {
+
+    background-color: #0AC60A;
+    
+}
+
+.button-active-css {
+
+    color: #ffffff;
+}
+
+Link:active{
+    background-color: #0AC60A;
+}

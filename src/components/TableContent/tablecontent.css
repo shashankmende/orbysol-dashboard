@@ -1,0 +1,93 @@
+.table-bg-container{
+    border-top: 1px solid gray;
+    
+    overflow-y: auto;
+    height: 76.5vh;
+   
+    
+}
+table{
+
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0px 0;
+    font-size: 18px;
+    text-align: left;
+    
+    
+}
+th{
+    background-color: #e9e5af !important;
+    padding: 10px;
+}
+
+thead{
+    /* position: sticky;
+    width: 100%; */
+    top: 0px;
+    
+    border-bottom: 1px solid black;
+}
+
+td{
+    /* color: white;
+    text-shadow: 1px 1px 5px black; */
+}
+
+tr{
+    padding: 10px;
+    position: static;
+    /* transition: transform 0.5s; */
+}
+/* tr:hover{
+    background-color: rgb(226, 222, 222);
+    color: rgb(71, 71, 129);
+    font-weight: bold;
+    transform: scale(102%);
+    transition-timing-function: ease-out;
+} */
+
+th,td{
+    padding: 15px;
+    color: black !important;
+    font-size: 17px !important;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody{
+    background-color: #fcfcfb;
+}
+
+.patient-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.image-patient-name {
+    display: flex;
+    align-items: center;
+}
+
+.patient-image-down {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.status-text {
+    color: green;
+    font-weight: bold;
+}
+
+*{
+    font-size: 16px;
+}
+
+.table-content-footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}

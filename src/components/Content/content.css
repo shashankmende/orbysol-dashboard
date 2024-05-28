@@ -1,0 +1,146 @@
+
+*{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+
+.content-bg-container {
+    height: 75vh;
+    overflow-x: auto;
+    flex-grow: 1;
+    
+}
+
+
+
+.individual-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: sans-serif;
+    
+    border-bottom: 1px solid black;
+    height: 150px;
+    
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 180px;
+}
+
+.date-time-para {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.dot-container {
+    display: flex;
+    
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #9cfd00;
+}
+.days {
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.dash-board-horizontal-line1 {
+    width: 2.5px;
+    background-color: #383bfb;
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 6px;
+}
+.dash-board-horizontal-line2 {
+    width: 2.5px;
+    background-color: #faa150;
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 6px;
+}
+
+.dash-board-horizontal-line3 {
+    width: 2.5px;
+    background-color: #8af98b;
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 6px;
+}
+
+
+.patient-details-container {
+    padding: 10px;
+    width: 280px;
+    
+    display: flex;
+    
+    
+
+}
+
+.patient-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 40px;
+    height: 80px;
+    
+}
+
+.patients-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.patient-name1 {
+    color: #383bfb;
+    font-size: 19px;
+}
+.patient-name2 {
+    color: #faa150;
+    font-size: 19px;
+}
+
+.patient-name3 {
+    color: #8af98b;
+    font-size: 19px;
+}
+
+
+.patient-text-date-para {
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.para2 {
+    color: rgb(135, 129, 129);
+    
+    font-size: 14px;
+    
+}
+
+
+
+.ecg-container {
+    width: 900px;
+    
+}
+
+
+
+

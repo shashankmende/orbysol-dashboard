@@ -1,0 +1,86 @@
+
+.sidebar-container {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    animation: sidebarAnimation 1s 1s 2s 1 forwards;
+}
+
+@keyframes sidebarAnimation {
+  from {
+    width: 0px;
+    background-color: red;
+  }
+  to {
+    transform: translateX(300px);
+    background-color: blue;
+  }
+}
+
+
+.header-row {
+  background-color: #ddd !important;
+}
+
+
+.react-icon{
+    cursor: pointer;
+}
+
+.patients-bg-container {
+    display:flex;
+    justify-content: center;
+    padding: 20px;
+    
+    
+}
+
+.heading-input-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.heading-input-container input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+.patients-list-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4B4B4C;
+    font-size: 28px;
+
+}
+
+.patients-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    
+  }
+  
+  th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: rgb(10, 89, 10);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1 !important;
+    transform: scale(1);
+    color: none;
+    
+  }
+  
